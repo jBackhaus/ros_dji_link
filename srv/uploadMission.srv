@@ -1,0 +1,4 @@
+bool request
+---
+bool success
+uint32 wp_transferred

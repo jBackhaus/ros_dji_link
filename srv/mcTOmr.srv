@@ -1,0 +1,3 @@
+mission_control/Mission mcMission
+---
+mavros_msgs/WaypointList mrMission

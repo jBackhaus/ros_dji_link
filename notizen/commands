@@ -1,0 +1,90 @@
+rosrun mavros mavros_node _fcu_url:="udp://192.168.2.14:14550@192.168.2.9:14550" _conn/heartbeat_rate:=1.0 _target_system_id:=2 _target_component_id:=0 _fcu_protocol:="v1.0"
+
+rosrun mavros mavros_node _fcu_url:="udp://134.169.249.142:14550@134.169.248.144:14550" _conn/heartbeat_rate:=1.0 _target_system_id:=2 _target_component_id:=0 _fcu_protocol:="v1.0"
+
+
+
+
+##Mission
+rosservice call /mavros/mission/push "start_index: 0
+waypoints:
+- {frame: 3, command: 16, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 52.31441, y_long: 10.549286, z_alt: 30.0}
+- {frame: 3, command: 206, is_current: false, autocontinue: true, param1: 11.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}
+- {frame: 3, command: 16, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 52.31441, y_long: 10.547099, z_alt: 30.0}
+- {frame: 3, command: 206, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}
+- {frame: 3, command: 16, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 52.31418, y_long: 10.547099, z_alt: 30.0}
+- {frame: 3, command: 206, is_current: false, autocontinue: true, param1: 11.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}
+- {frame: 3, command: 16, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 52.31418, y_long: 10.549286, z_alt: 30.0}
+- {frame: 3, command: 206, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}
+- {frame: 3, command: 16, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 52.31395, y_long: 10.549286, z_alt: 30.0}
+- {frame: 3, command: 206, is_current: false, autocontinue: true, param1: 11.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}
+- {frame: 3, command: 16, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 52.31395, y_long: 10.547099, z_alt: 30.0}
+- {frame: 3, command: 206, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}
+- {frame: 3, command: 16, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 52.31372, y_long: 10.547099, z_alt: 30.0}
+- {frame: 3, command: 206, is_current: false, autocontinue: true, param1: 11.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}
+- {frame: 3, command: 16, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 52.31372, y_long: 10.549286, z_alt: 30.0}
+- {frame: 3, command: 206, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}"
+
+
+
+rosservice call /mavros/mission/push "start_index: 0
+waypoints:
+- {frame: 0, command: 205, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}
+- {frame: 0, command: 16, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 52.31441, y_long: 10.549286, z_alt: 30.0}
+- {frame: 0, command: 206, is_current: false, autocontinue: true, param1: 11.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}
+- {frame: 0, command: 16, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 52.31441, y_long: 10.547099, z_alt: 30.0}
+- {frame: 0, command: 206, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}
+- {frame: 0, command: 205, is_current: false, autocontinue: true, param1: -90.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}
+- {frame: 0, command: 16, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 52.31418, y_long: 10.547099, z_alt: 30.0}
+- {frame: 0, command: 206, is_current: false, autocontinue: true, param1: 11.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}
+- {frame: 0, command: 16, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 52.31418, y_long: 10.549286, z_alt: 30.0}
+- {frame: 0, command: 206, is_current: false, autocontinue: true, param1: 0.0, param2: 0.0,
+  param3: 0.0, param4: 0.0, x_lat: 0, y_long: 0, z_alt: 0}"
+
+
+
+rosservice call /dji_link/SetMission "mission: {vehicle: 0, sensor: 0, missiontype: 1, waypoints: 
+[{point: {lat: 52.31441, lng: 10.549286}, rel_height: 30.0, speed: 5.0},
+ {point: {lat: 52.31441, lng: 10.547099}, rel_height: 30.0, speed: 5.0},
+ {point: {lat: 52.31418, lng: 10.547099}, rel_height: 30.0, speed: 5.0},
+ {point: {lat: 52.31418, lng: 10.549286}, rel_height: 30.0, speed: 5.0}],
+ home: {point: {lat: 52.31441, lng: 10.549286}, rel_height: 0.0, speed: 5.0}}"
+
+rosservice call /uploadMission 1
+
+rosservice call /startMission 1
+
+##Gimbal_Pitch @param1
+rosservice call /mavros/cmd/command "{broadcast: false, command: 205, confirmation: 0, param1: 70, param2: 0, param3: 0, param4: 0, param5: 0, param6: 0, param7: 0}"
+
+
+##Start Mission
+rosservice call /mavros/cmd/arming 1
+
+
+rosrun rviz rviz

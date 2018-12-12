@@ -1,0 +1,29 @@
+<launch>
+
+
+	<arg name="ownIP" value="134.169.254.62"/>
+	<arg name="tabletIP" value="134.169.254.87"/>
+	<arg name="tcpPort" value="14551"/>
+	<arg name="udpPort" value="14550"/>
+
+
+
+
+
+	<param name="tcpIP" value="$(arg ownIP)" type="str"/>
+	<param name="tcpPort" value="$(arg tcpPort)" type="int"/>
+
+	<param name="folderPath" value="/home/jan/tcpImages/" type="str" />
+	<param name="flightSpeed" value="5" type="int" />
+	<param name="imageDistance" value="50" type="int" />
+	<param name="geoImageTopic" value="dji_geo_img" type="str" />
+	<param name="djiFilenameTopic" value="dji_img_file" type="str" />
+	<param name="gimbalPitch" value="-90" type= "int" />
+
+	
+	
+
+
+
+
+</launch>

@@ -1,0 +1,11 @@
+Mav_CMD 520             request autopilot capabilities
+
+PARAM_REQUEST_LIST      
+
+MAV_CMD 410             get home position
+
+"Wegpunktliste wird gesendet"
+
+"Wegpktüb kann nicht erneut gestartet werden. Übertragung läuft bereits"
+
+MAV_CMD 410 tiab

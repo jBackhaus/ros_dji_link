@@ -1,0 +1,45 @@
+<launch>
+
+	<group ns="dji_link">
+
+		<arg name="ownIP" value="134.169.254.62"/>
+		<arg name="tabletIP" value="134.169.254.87"/>
+		<arg name="tcpPort" value="14551"/>
+		<arg name="udpPort" value="14550"/>
+
+
+
+
+
+		<param name="tcpIP" value="$(arg ownIP)" type="str"/>
+		<param name="tcpPort" value="$(arg tcpPort)" type="int"/>
+
+		<param name="folderPath" value="/home/jan/tcpImages/" type="str" />
+		<param name="flightSpeed" value="5" type="int" />
+		<param name="imageDistance" value="50" type="int" />
+		<param name="geoImageTopic" value="dji_geo_img" type="str" />
+		<param name="djiFilenameTopic" value="dji_img_file" type="str" />
+		<param name="gimbalPitch" value="-90" type= "int" />
+
+		<node name="imagePublisher" pkg="dji_link" type="im_pub_node" output="screen"/>
+		<node name="tcpImageReceiver" pkg="dji_link" type="tcp_serv.py" output="screen"/>
+		<node name="dji_link_node" pkg="dji_link" type="dji_link_node.py" output="screen"/>
+		<node name="missionTrafo" pkg="dji_link" type="missionTrafo.py" output="screen"/>
+		<node name="mavros" pkg="mavros" type="mavros_node" output="screen">
+			<param name="fcu_url" value="udp://$(arg ownIP):$(arg udpPort)@$(arg tabletIP):$(arg udpPort)" type="str"/>
+			<param name="conn/heartbeat_rate" value="1.0" type="double"/>
+			<param name="target_system_id" value="2" type="int"/>
+			<param name="target_component_id" value="0" type="int"/>
+			<param name="fcu_protocol" value="v1.0" type="str"/>
+			<param name="global_position/frame_id" value="local_origin" type="str"/>
+
+		</node>
+		<node name="locationListener" pkg="dji_link" type="locationListener.py" output="screen"/>
+
+		<node name="missionControl" pkg="mission_control" type="mission_control" output="screen"/>
+	</group>
+
+
+
+
+</launch>
